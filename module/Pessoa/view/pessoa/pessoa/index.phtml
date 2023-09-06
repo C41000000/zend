@@ -1,0 +1,34 @@
+<?php
+?>
+
+<h3>Pessoas Cadastradas</h3>
+
+<table class='table table-striped'>
+    <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Email</th>
+        <th>Sistuação</th>
+    </tr>
+<?php foreach($pessoas as $pes){  ?>
+    <tr>
+        <td>
+            <?=$pes->getId()?>
+        </td>
+        <td>
+            <?=$pes->getNome()?>
+        </td>
+        <td>
+            <?=$pes->getSobrenome()?>
+        </td>
+        <td>
+            <?=$pes->getEmail()?>
+        </td>
+        <td>
+            <?=$pes->getSituacao()?>
+        </td>
+        
+    </tr>
+<?php } ?>
+</table>
