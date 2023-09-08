@@ -3,12 +3,23 @@
 
 namespace Pessoa;
 
+use Zend\Router\Http\Literal;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 
 return [
     'router' => [
         'routes' => [
+            'home' => [
+                'type'    => Literal::class,
+                'options' => [
+                    'route'    => '/',
+                    'defaults' => [
+                        'controller' => Controller\PessoaController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
             'pessoa' => [
                 'type' => \Zend\Router\Http\Segment::class,
                 'options' => [

@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?= $this->headTitle('ZF Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?= $this->headTitle('CRUD Zend 3')->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?= $this->headMeta()
             ->appendName('viewport', 'width=device-width, initial-scale=1.0')
@@ -20,6 +20,8 @@
         <?= $this->inlineScript()
             ->prependFile($this->basePath('js/bootstrap.min.js'))
             ->prependFile($this->basePath('js/jquery-3.3.1.min.js'))
+
+
         ?>
     </head>
     <body>
@@ -29,14 +31,18 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= $this->url('home') ?>">
-                        <img src="<?= $this->basePath('img/zf-logo-mark.svg') ?>" height="28" alt="Zend Framework <?= \Application\Module::VERSION ?>"/>&nbsp;Skeleton Application
-                    </a>
+<!--                    <a class="navbar-brand" href="--><?php //= $this->url('home') ?><!--">-->
+<!--                        <img src="--><?php //= $this->basePath('img/zf-logo-mark.svg') ?><!--" height="28" alt="Zend Framework --><?php //= \Application\Module::VERSION ?><!--"/>&nbsp;CRUD Zend 3-->
+<!--                    </a>-->
+
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="<?= $this->url('home') ?>">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="<?= $this->url('pessoa') ?>">Pessoas <span class="sr-only">(current)</span></a>
                         </li>
                     </ul>
                 </div>

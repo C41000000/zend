@@ -1,8 +1,7 @@
-<?php
-?>
 
 <h3>Pessoas Cadastradas</h3>
 
+<a class=" btn btn-primary" href="<?= $this->url('pessoa', ['controller' => 'pessoa', 'action' => 'adicionar']) ?>">Adicionar</a>
 <table class='table table-striped'>
     <tr>
         <th>Código</th>
@@ -10,6 +9,7 @@
         <th>Sobrenome</th>
         <th>Email</th>
         <th>Sistuação</th>
+        <th>Ação</th>
     </tr>
 <?php foreach($pessoas as $pes){  ?>
     <tr>
@@ -27,6 +27,11 @@
         </td>
         <td>
             <?=$pes->getSituacao()?>
+        </td>
+        <td>
+            <a class='btn-info btn btn-sm' href="<?= $this->url('pessoa', ['action' => 'editar', 'id' => $pes->getId()]) ?>">Editar</a>
+
+            <a class='btn-danger btn btn-sm' href="<?= $this->url('pessoa', ['action' => 'remover', 'id' => $pes->getId()]) ?>">Excluir</a>
         </td>
         
     </tr>
